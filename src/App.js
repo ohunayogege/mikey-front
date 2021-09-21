@@ -7,6 +7,7 @@ import Home from './Home';
 
 //Protected content
 import Content from './ProtectedContent/Content';
+import Subscribe from './ProtectedContent/Subscribe';
 
 
 //Auth
@@ -36,6 +37,7 @@ function App() {
                 {/*Protected content*/}
               
                 <Route path = '/Content'  component = {Content} />
+                <Route path = '/Subscribe'  component = {Subscribe} />
 
         
                 {/*Authentication*/}

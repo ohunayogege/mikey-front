@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 const baseURL = 'http://127.0.0.1:8000/api/';
+// const baseURL = 'http://localhost/api/';
 
 const axiosInstance = axios.create({
 	baseURL: baseURL,
@@ -21,6 +22,7 @@ axiosInstance.interceptors.response.use(
 	},
 	async function (error) {
 		const originalRequest = error.config;
+		console.log(error.response);
 
 		if (typeof error.response === 'undefined') {
 			alert(
